@@ -1,0 +1,16 @@
+def find_words_with_vowels(sentence):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words = sentence.split()
+    words_with_vowels = []
+
+    for word in words:
+        if any(vowel in word.lower() for vowel in vowels):
+            words_with_vowels.append(word)
+
+    return words_with_vowels
+
+
+# Example usage:
+sentence = input("Enter a sentence: ")
+result = find_words_with_vowels(sentence)
+print("Words with vowels:", result)
